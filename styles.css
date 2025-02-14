@@ -1,0 +1,158 @@
+body {
+  font-family: "Arial", sans-serif;
+  background-color: #ffe6e6;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  padding: 20px;
+}
+
+button {
+  background-color: #ff4d6d;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+
+button:hover {
+  background-color: #ff1a4d;
+}
+
+.content {
+  margin-top: 20px;
+}
+
+.letter {
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  display: inline-block;
+  text-align: left;
+}
+
+.game {
+  margin-top: 20px;
+}
+
+.heart-container {
+  width: 50px;
+  height: 50px;
+  background-color: red;
+  border-radius: 50%;
+  display: inline-block;
+  cursor: pointer;
+  animation: heartbeat 1s infinite;
+}
+
+@keyframes heartbeat {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+}
+
+.love-message {
+  background: pink;
+  padding: 20px;
+  border-radius: 10px;
+  margin-top: 20px;
+}
+
+.restart-btn {
+  background-color: #ff66a3;
+  margin-top: 10px;
+}
+
+.heart-rain {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  z-index: -1;
+}
+
+.heart-rain::before {
+  content: "❤️ 💕 💖 💗 💓 💞 💘";
+  position: absolute;
+  font-size: 40px;
+  animation: fall 5s linear infinite;
+}
+
+@keyframes fall {
+  0% {
+    transform: translateY(-10vh);
+  }
+  100% {
+    transform: translateY(100vh);
+  }
+}
+
+.secret-surprise {
+  margin-top: 20px;
+  background: lightyellow;
+  padding: 15px;
+  border-radius: 8px;
+}
+.poem {
+  text-align: center;
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: #f11b1b;
+  opacity: 0;
+  animation: fadeInPoem 2s ease-in-out forwards;
+}
+
+.poem span {
+  display: block;
+  opacity: 0;
+  animation: fadeInLine 1.5s ease-in-out forwards;
+}
+
+.poem span:nth-child(1) {
+  animation-delay: 0.5s;
+}
+
+.poem span:nth-child(2) {
+  animation-delay: 1s;
+}
+
+.poem span:nth-child(3) {
+  animation-delay: 1.5s;
+}
+
+.poem span:nth-child(4) {
+  animation-delay: 2s;
+}
+
+@keyframes fadeInPoem {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInLine {
+  from {
+    opacity: 0;
+    transform: translateY(5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
